@@ -15,7 +15,6 @@ public:
 
 	}
 
-	~Student() {};
 public:
 	void GetName()
 	{
@@ -51,4 +50,10 @@ void Student::Show()
 	cout << "Номер группы: ";
 	this->GetGroupNumber();
 
+}
+int main() {
+
+	Student hhh("Alex", 1, "185", 18);
+	hhh.Show();
+	return 0; 
 }

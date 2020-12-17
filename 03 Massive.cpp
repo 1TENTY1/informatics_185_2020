@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 class Massive {
@@ -13,8 +13,8 @@ public:
 		col = 0;
 		row = 0;
 	}
-	~Massive()
-	{
+
+	~Massive() {
 		delete arr;
 	}
 public:
@@ -38,7 +38,7 @@ public:
 
 	void createMassive()
 	{
-		arr = new int* [row];
+		arr = new int*[row];
 		for (int i = 0; i < row; i++)
 			arr[i] = new int[col];
 		for (int i = 0; i < col; i++)
@@ -51,7 +51,7 @@ public:
 	{
 		for (int i = 0; i < col; i++)
 		{
-			int Min = 10000000000000000;
+			int Min = 100000;
 			for (int j = 0; j < row; j++)
 			{
 				if (arr[j][i] < Min)
@@ -67,3 +67,13 @@ public:
 	}
 private:
 };
+
+int main() {
+
+	Massive hhh;
+	hhh.setCol(3) :
+    hhh.setRow(3);
+	hhh.createMassive();
+	hhh.chageMassive();
+	return 0;
+}

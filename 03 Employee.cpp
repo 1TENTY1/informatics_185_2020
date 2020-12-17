@@ -24,7 +24,6 @@ public:
 		MoneyPerHour = moneyperhour;
 	}
 
-	~Employee() {};
 public:
 	int Salary()
 	{
@@ -52,6 +51,8 @@ public:
 		cout << "Номер телефона: " << PhoneNumber << endl;
 		cout << "Отработано часов: " << HoursWorked << endl;
 		cout << "Денег в час: " << MoneyPerHour << endl;
+		cout << "Зарплата: " << Salary() << endl;
+		cout << "Премия: " << Premium() << endl;
  	}
 
 	void WriteToFile()
@@ -65,6 +66,15 @@ public:
 		fout << "Номер телефона: " << PhoneNumber << endl;
 		fout << "Отработано часов: " << HoursWorked << endl;
 		fout << "Денег в час: " << MoneyPerHour << endl;
+		fout << "Зарплата: " << Salary() << endl;
+		flot << "Премия: " << Premium() << endl;
 		fout.close();
 	}
 };
+int main() {
+
+	Employee hhh("Alex", "Devochkin", 12, "Ivanovo", "880353535", 5, 5);
+	hhh.Show();
+	hhh.WriteToFile();
+	return 0;
+}

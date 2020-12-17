@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 #define PI 3.1415
 
@@ -58,7 +59,6 @@ public:
 		Mass = mass;
 		Stiffness = stiffness;
 	}
-	~PhysicalPendulum() {};
 public:
 	virtual double getPeriod() override
 	{
@@ -70,3 +70,10 @@ public:
 		return sqrt(Stiffness/Mass);
 	}
 };
+
+int main() {
+
+	MathPendulum hhh(1);
+	cout << hhh.getPeriod();
+	return 0;
+}

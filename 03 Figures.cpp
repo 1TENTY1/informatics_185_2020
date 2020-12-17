@@ -1,6 +1,9 @@
 #include <iostream>
-
+#include <cmath>
+using namespace std;
 #define PI 3.1415
+
+
 
 class Figure
 {
@@ -18,7 +21,6 @@ public:
 	{
 		Radius = radius;
 	}
-	~Circle() {};
 
 public:
 	virtual double Perimeter() override
@@ -42,7 +44,6 @@ public:
 		Length = length;
 		Width = width;
 	}
-	~Rectangle() {};
 
 public:
 	virtual double Perimeter() override
@@ -62,13 +63,12 @@ private:
 	double AC;
 	double BC;
 public:
-	Triangle(double ab,double ac,double bc)
+	Triangle(double ab, double ac, double bc)
 	{
 		AB = ab;
 		AC = ac;
 		BC = bc;
 	}
-	~Triangle() {};
 
 public:
 	virtual double Perimeter() override
@@ -99,8 +99,7 @@ public:
 		Side2 = side2;
 		Height = height;
 	}
-		
-	~Trapezoid(){};
+
 
 public:
 	virtual double Perimeter() override
@@ -112,3 +111,23 @@ public:
 		return (Base1 + Base2) / 2 * Height;
 	}
 };
+
+int main() {
+	Triangle hhh(3, 8, 6);
+	Trapezoid www(3, 4, 2, 4, 4);
+	Rectangle ggg(25, 30);
+	Circle rrr(5);
+	cout << "Triangle" << endl;
+	cout << hhh.Perimeter() << endl;
+	cout << hhh.Square() << endl;
+	cout << "Trapezoid" << endl;
+	cout << www.Perimeter() << endl;
+	cout << www.Square() << endl;
+	cout << "Rectangle" << endl;
+	cout << ggg.Perimeter() << endl;
+	cout << ggg.Square() << endl;
+	cout << "Circle" << endl;
+	cout << rrr.Perimeter() << endl;
+	cout << rrr.Square() << endl;
+	return 0;
+}
